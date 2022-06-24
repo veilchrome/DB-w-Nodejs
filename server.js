@@ -27,7 +27,7 @@ db.connect((err) => {
       res.render('index', { users: users, title: 'DAFTAR MURID' });
     });
   });
-
+  // Untuk Insert Data
   app.post('/tambah', (req, res) => {
     const insertSql = `INSERT INTO user (nama, kelas) VALUES('${req.body.nama}','${req.body.kelas}');`;
     db.query(insertSql, (err, result) => {
